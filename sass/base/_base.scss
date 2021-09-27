@@ -6,5 +6,40 @@
 }
 
 html{
-    font-size:62.5%;
+    // defining the 1rem 
+    font-size:62.5%;  // 1rem is equal to 10px here
+
+   
+    @include respond(tab-land)  //1200px
+    {
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port)  //900px
+    {
+        font-size: 50%;
+    }
+
+     @include respond(phone)    //600px
+    {
+        font-size: 30%;
+    }
+
+    @include respond(desktop)   //1800+
+    {
+        font-size: 75%;
+    }
+}
+
+body
+{
+    box-sizing: border-box;
+    padding: 3rem;
+
+  
+    @include respond(tab-port)  //900px
+    {
+        padding: 0;
+    }
+
 }
